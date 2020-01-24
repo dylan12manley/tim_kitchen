@@ -60,15 +60,15 @@
  }
  .main {
    padding-right: 1em;
-   margin right: 1em;
-   min-width: 1000px
+   margin-right: 1em;
+   min-width: 1000px;
  }
  .row {
    columns: 2;
  }
  .scrollBar {
    overflow: auto;
-   max-height: 775px
+   max-height: 775px;
  }
  .sideBar {
    width: 18em;
