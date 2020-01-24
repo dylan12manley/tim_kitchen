@@ -14,6 +14,11 @@
   </head>
 
   <body>
+    <% if current_user %>
+    <%= current_user.email %> | <%= link_to "Sign out", '/signout' %>
+    <% else %>
+    <%= link_to "Sign up", 'signup' %> | <%= link_to "Sign in", '/signin' %>
+    <% end %>
     <div class="headers">
       <div class="headersEffect">
 
