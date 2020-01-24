@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
-  helper_method :current_user
+  helper_method :current_user, :user_admin
 
   def current_user
     if session[:user_id]
@@ -11,14 +11,16 @@ class ApplicationController < ActionController::Base
   def authorize
     if !current_user
       flash[:alert] = "Please log in."
+      redirect_to '/'
     end
   end
 
   def user_admin
     if !current_user
       flash[:alert] = "Please log in."
+      redirect_to '/'
     elsif current_user.admin = false
-      flash[:alert] = "You have admin access to do that."
+      flash[:alert] = "You need admin access to do that."
     end
   end
 
