@@ -13,3 +13,105 @@
  *= require_tree .
  *= require_self
  */
+ body {
+    padding: 2em 7em;
+    display: inline-block;
+    background: rgb(121,93,157);
+    background: linear-gradient(90deg, rgba(121,93,157,1) 2%, rgba(237,201,206,1) 9%, rgba(237,201,206,1) 87%, rgba(105,78,140,1) 99%);
+    color: 293031;
+    max-width: 1000px;
+    font-family: 'Kalam', cursive;
+  }
+  h4 {
+    font-size: 18px;
+      font-family: 'Shadows Into Light', cursive;
+  }
+  li {
+    list-style-type: none;
+    font-family: 'Caveat', cursive;
+  }
+ .headers {
+    max-width: 940px;
+    background: linear-gradient(90deg, rgba(121,93,157,1) 1%, #D0B8EF 4%, #D0B8EF 96%, rgba(105,78,140,1) 99%);
+    padding: 0, 2em;
+    text-align: center;
+ }
+
+ .mainHeader {
+     font-family: 'Shadows Into Light', cursive;
+ }
+ .seccondHeader {
+   max-width: 940px;
+   background: linear-gradient(90deg, rgba(121,93,157,1) 1%, #D0B8EF 4%, #D0B8EF 96%, rgba(105,78,140,1) 99%);
+   padding: 0.8em 2em;
+   text-align: center;
+   font-family: 'Shadows Into Light', cursive;
+ }
+ .headersEffect { background: linear-gradient(0deg, #e8f6c6 1%, #D0B8EF 4%, #D0B8EF 96%, #e8f6c6 99%);
+   padding: 0.8em .6em;
+   max-height: 133px;
+ }
+ .listHeader {
+   /* width: 16em; */
+   text-align: center;
+   padding-right: 27vw;
+   min-height: 30px;
+     font-family: 'Shadows Into Light', cursive;
+ }
+ .main {
+   padding-right: 1em;
+   margin right: 1em;
+   min-width: 1000px
+ }
+ .row {
+   columns: 2;
+ }
+ .scrollBar {
+   overflow: auto;
+   max-height: 775px
+ }
+ .sideBar {
+   width: 18em;
+   length: 750px;
+   z-index: 1;
+   top: 4em;
+   left: 3.5em;
+   background: linear-gradient(90deg,  #e8f6c6 1%, #c7b0e6 89%);
+   text-align: left;
+   padding: .15em;
+ }
+ #flashes {
+  background: #B26E78;
+  text-align: center;
+ }
+ .bestFont {
+     font-family: 'Shadows Into Light', cursive;
+     font-weight: 600;
+ }
+ h3 {
+   font-family: 'Shadows Into Light', cursive;
+   font-size: 24px;
+ }
+ h3 {
+   font-family: 'Shadows Into Light', cursive;
+   font-size: 29px;
+ }
+
+ .sideBar a {
+   padding: 6px 8px 6px 16px;
+   text-decoration: none;
+   font-size: 1.2em;
+   color: #641ac7;
+   /* display: block; */
+ }
+
+  a {
+   text-decoration: none;
+   font-size: 1.2em;
+   color: #641ac7;
+   font-family: 'Shadows Into Light', cursive;
+ }
+
+  a:hover {
+   color: #064579;
+ }
