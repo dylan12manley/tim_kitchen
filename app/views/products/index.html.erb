@@ -1,0 +1,38 @@
+    <h4 class="seccondHeader">We're a local farm to kitchen ingredient store. Founded by a retired sailer in 2014.<br>Sourced with randon old food he found while cleaning hit boat, and the savings are passsed along to you!</h4>
+    <div class="listHeader">
+      <p><%= link_to "Create new product", new_product_path %></p>
+      <h2>Products Currently Available</h2>
+    </div>
+    <% if @products.any? %>
+    <div class="row">
+      <ul class="scrollBar">
+        <div class="sideBar">
+        <% @products.each do |product| %>
+        <li><%= link_to product.name, product_path(product) %> --- <%=number_to_currency(product.cost) %></li>
+        <% end %>
+      </div>
+      </ul>
+  <div class="column-5">
+    <div class="scopes">
+      <h3>Three Most Recently Added Products</h3>
+      <% most_recent = @products.most_recent %>
+      <% most_recent.each do |recent_product| %>
+      <li><%= link_to recent_product.name, product_path(recent_product) %></li>
+      <% end %>
+
+      <h3>All of the Local Products<br>(from the USA)</h3>
+      <% local_products = @products.local_products %>
+      <% local_products.each do |local_product| %>
+      <li> <%= link_to local_product.name, product_path(local_product) %></li>
+      <% end %>
+
+      <h3>Product with the Most Reviews</h3>
+      <%= link_to @most_reviews.name, product_path(@most_reviews) %>
+    </div>
+  </div>
+</div>
+    <% else %>
+    <p>There are no products yet.</p>
+    <% end %>
+
+</div>

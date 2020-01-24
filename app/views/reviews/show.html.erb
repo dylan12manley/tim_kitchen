@@ -1,0 +1,5 @@
+<h2>Product: <%= @product.name %></h2>
+<h2>Review by: <%= @review.author %></h2>
+<p><%= @review.content_body %></p>
+
+<p><%= link_to "Return to product", product_path(@product) %></p>

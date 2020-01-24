@@ -1,15 +1,34 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>TimKitchen</title>
+    <title>Tim Kitchen</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application',
+    'https://fonts.googleapis.com/css?family=Caveat|Kalam|Shadows+Into+Light&display=swap',
+     media: 'all', 'data-turbolinks-track' => true %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    <% if current_user %>
+      <%= current_user.email %> | <%= link_to "Sign out", '/signout' %>
+    <% else %>
+      <%= link_to "Sign up", 'signup' %> | <%= link_to "Sign in", '/signin' %>
+    <% end %>
+    <div class="headers">
+      <div class="headersEffect">
+
+      <h1 class="mainHeader">Tim's Kitchen: Products</h1>
+    </div>
+    </div>
+    <div id="flashes">
+    <h5 class="flashText"><%= flash[:alert] %></h5>
+    <h5 class="flashText"><%= flash[:notice] %></h5>
+  </div>
     <%= yield %>
   </body>
 </html>
