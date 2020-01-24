@@ -1,6 +1,8 @@
     <h4 class="seccondHeader">We're a local farm to kitchen ingredient store. Founded by a retired sailer in 2014.<br>Sourced with randon old food he found while cleaning hit boat, and the savings are passsed along to you!</h4>
     <div class="listHeader">
+      <% if !user_admin %>
       <p><%= link_to "Create new product", new_product_path %></p>
+      <% end %>
       <h2>Products Currently Available</h2>
     </div>
     <% if @products.any? %>
