@@ -1,6 +1,7 @@
 class Product < ApplicationRecord
-  before_save(:titleize_name)
   has_many :reviews, dependent: :destroy
+  
+  before_save(:titleize_name)
 
   validates :name, presence: true
   validates :cost, presence: true
