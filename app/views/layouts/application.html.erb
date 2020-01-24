@@ -21,8 +21,7 @@
     </div>
     </div>
     <div id="flashes">
-    <h5 class="flashText"><%= flash[:alert] %></h5>
-    <h5 class="flashText"><%= flash[:notice] %></h5>
+    <%= render 'layouts/alerts' %>
   </div>
     <%= yield %>
   </body>
