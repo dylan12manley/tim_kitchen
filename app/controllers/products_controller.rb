@@ -1,6 +1,5 @@
 class ProductsController < ApplicationController
-  before_action :user_admin, only: [:new, :create, :edit, :destroy]
-  # before_action :authorize, only: [:new, :create, :edit]
+  before_action :user_admin, only: [:new, :create, :update, :edit, :destroy]
 
   def index
     @products = Product.all
@@ -17,7 +16,7 @@ class ProductsController < ApplicationController
     @product = Product.new(product_params)
     if @product.save
       flash[:notice] = "Product successfully created."
-      redirect_to products_path
+      render :show
     else
       render :new
     end

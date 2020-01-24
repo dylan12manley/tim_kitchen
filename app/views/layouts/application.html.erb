@@ -19,15 +19,15 @@
     <% else %>
     <%= link_to "Sign up", 'signup' %> | <%= link_to "Sign in", '/signin' %>
     <% end %>
+    <div id="flashes">
+      <%= render 'layouts/alerts' %>
+    </div>
     <div class="headers">
       <div class="headersEffect">
 
       <h1 class="mainHeader">Tim's Kitchen: Products</h1>
     </div>
     </div>
-    <div id="flashes">
-    <%= render 'layouts/alerts' %>
-  </div>
     <%= yield %>
   </body>
 </html>
