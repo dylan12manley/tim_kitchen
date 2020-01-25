@@ -18,4 +18,12 @@ describe User, :model do
       expect(user.password).to eq nil
     end
   end
+  context '(authentication)' do
+    it 'authenticates user' do
+      User.destroy_all
+      dummy = User.create!({email: 'email@address.com', password: 12345})
+      expect(User.authenticate('email@address.com', 11111)).to eq nil
+      expect(User.authenticate('email@address.com', 12345)).to eq dummy
+    end
+  end
 end
