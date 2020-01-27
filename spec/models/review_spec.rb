@@ -3,7 +3,7 @@ require 'rails_helper'
 describe Review do
   context '(associations)' do
   it { should belong_to(:product) }
-  it { should belong_to(:user) }
+  # it { should belong_to(:user) }
 end
 context '(validations)' do
   it { should validate_presence_of(:author)}
