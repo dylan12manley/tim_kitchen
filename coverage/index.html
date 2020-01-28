@@ -14,7 +14,7 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2020-01-26T17:43:23-08:00">2020-01-26T17:43:23-08:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2020-01-26T20:14:01-08:00">2020-01-26T20:14:01-08:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,7 +25,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.11
+         1.1
        </span>
     </span> hits/line)
   </h2>
@@ -77,7 +77,7 @@
         <td>17</td>
         <td>10</td>
         <td>7</td>
-        <td>2.4</td>
+        <td>2.1</td>
       </tr>
       
       <tr>
@@ -566,14 +566,14 @@
           <code class="ruby">  def current_user</code>
         </li>
       
-        <li class="covered" data-hits="17" data-linenumber="6">
-          <span class="hits">17</span>
+        <li class="covered" data-hits="15" data-linenumber="6">
+          <span class="hits">15</span>
           
           <code class="ruby">    if session[:user_id]</code>
         </li>
       
-        <li class="covered" data-hits="14" data-linenumber="7">
-          <span class="hits">14</span>
+        <li class="covered" data-hits="12" data-linenumber="7">
+          <span class="hits">12</span>
           
           <code class="ruby">      @current_user ||= User.find(session[:user_id])</code>
         </li>
@@ -644,8 +644,8 @@
           <code class="ruby">  def user_admin</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="19">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="1" data-linenumber="19">
+          <span class="hits">1</span>
           
           <code class="ruby">    if !current_user</code>
         </li>
@@ -662,8 +662,8 @@
           <code class="ruby">      redirect_to &#39;/&#39;</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="22">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="1" data-linenumber="22">
+          <span class="hits">1</span>
           
           <code class="ruby">    elsif current_user.admin == false</code>
         </li>
@@ -732,7 +732,7 @@
         <li class="covered" data-hits="1" data-linenumber="2">
           <span class="hits">1</span>
           
-          <code class="ruby">  before_action :user_admin, only: [:new, :create, :update, :edit, :destroy]</code>
+          <code class="ruby">  before_action :user_admin, only: [:create, :update, :edit, :destroy]</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="3">
@@ -1093,7 +1093,7 @@
         <li class="covered" data-hits="1" data-linenumber="3">
           <span class="hits">1</span>
           
-          <code class="ruby">  before_action :authorize, only: [:new, :create]</code>
+          <code class="ruby">  before_action :authorize, only: [:create]</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="4">
