@@ -22,6 +22,7 @@ class ReviewsController < ApplicationController
   def show
   @product = Product.find(params[:product_id])
   @review = Review.find(params[:id])
+  @zapdos = get_zapdos()
   render :show
 end
 
@@ -33,7 +34,8 @@ end
 
 def update
   @review = Review.find(params[:id])
-  if @review.update(review_params)
+  if @review.update(review_param)
+    flash[:notice] = "Review successfully updated."
     redirect_to product_path(@review.product)
   else
     render :edit
@@ -45,6 +47,12 @@ def destroy
   @review.destroy
   redirect_to product_path(@review.product)
 end
+
+def get_zapdos
+  zapdos = HTTParty.get("http://pokeapi.co/api/v2/pokemon/zapdos/")
+  zapdos["sprites"]
+end
+
 
   # Other controller actions go here.
 
