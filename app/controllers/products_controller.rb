@@ -29,6 +29,7 @@ class ProductsController < ApplicationController
 
   def show
     @product = Product.find(params[:id])
+    @product.photos.attach(params[:photos])
     render :show
   end
 
@@ -51,6 +52,6 @@ class ProductsController < ApplicationController
 
   private
   def product_params
-    params.require(:product).permit(:name, :cost, :country_of_origin)
+    params.require(:product).permit(:name, :cost, :country_of_origin, photos: [])
   end
 end

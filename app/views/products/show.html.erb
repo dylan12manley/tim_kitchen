@@ -16,6 +16,14 @@
   <p>No reviews are listed for this product.</p>
 <% end %>
 
+<% if @product.photos.attached?%>
+<% @product.photos.each do |photo| %>
+<%= image_tag(photo)%>
+<% end %>
+<% else %>
+  <p>No photos for this product.</p>
+<% end %>
+
 <div>
 <p><%= link_to "Add an review", new_product_review_path(@product) %></p>
 <p><%= link_to "Edit", edit_product_path(@product) %></p>

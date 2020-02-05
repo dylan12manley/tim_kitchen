@@ -27,7 +27,24 @@ class SignupController < ApplicationController
     end
 end
 
-call photos.attach
+inside controller call -> photos.attach
 user.photos.attach(params[:photos])
+
+add this to the show view:
+<% if @spot.photos.attached?%>
+<% @spot.photos.each do |photo| %>
+<%= image_tag(photo)%>
+<% end %>
+<% else %>
+  <p>No photos for this product.</p>
+<% end %>
+
+Include activestorage.js in JavaScript bundle.
+using assist pipeline -> //= require activestorage
+
+Change file_field in form
+<%= form.file_field :attachments, multiple: true, direct_upload: true %>
+
+Configure CORS on third-party storage services to allow direct upload requests.
 
 https://edgeguides.rubyonrails.org/active_storage_overview.html
